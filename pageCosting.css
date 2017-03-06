@@ -1,0 +1,13 @@
+#totwrap {
+	font-size:120%;
+	font-weight: 600;
+}
+
+.underlined {
+	border-width: 0 0 2px 0;
+	border-style: solid;
+}
+
+.small {
+	font-size:60%;
+}
