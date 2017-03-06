@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<style type="text/css"></style>
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="resources/materialize-v0.98.0/css/materialize.min.css" media="screen,projection" />
+		<link type="text/css" rel="stylesheet" href="pageCosting.css" />
+		<link rel="icon" href="resources/dpicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	</head>
+	
+	<body>
+		
+		<div class="container">
+			<div class="row">
+				<div class="row">
+					<h1 class="center-align">Price Calculator</h1>
+					<div class="card-panel red accent-4 center-align"><span class="white-text">THIS USES NEW PRICES FROM FEB 2017. ENSURE YOU ARE USING THE RIGHT CALCULATOR.</span></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s4">
+					<div class="row">
+						<div class="input-field col s9">
+							<select id="paperType">
+								<option value="80gsm" selected>80gsm Uncoated</option>
+								<option value="90gsm" >90gsm Uncoated</option>
+								<option value="100gsm" >100gsm Uncoated</option>
+								<option value="120gsm" >120gsm Uncoated</option>
+								<option value="160gsm" >160gsm Uncoated</option>
+								<option value="200gsm" >200gsm Uncoated</option>
+								<option value="250gsm" >250gsm Uncoated</option>
+								<option value="silk" >130gsm Silk/Gloss</option>
+								<option value="80tint" >80gsm Tint</option>
+								<option value="160tint" >160gsm Tint</option>
+							</select>
+							<label>Paper Type</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s9">
+							<input id="totPages" type="text" class="validate" autofocus>
+							<label for="totPages">Pages</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s9">
+							<input id="totColour" type="text" class="validate">
+							<label for="totColour">Colour</label>
+						</div>
+					</div>
+					<div class="row">
+						<form>
+							<input name="duplex" type="radio" value="duplex" id="isDup" checked/>
+							<label for="isDup">Duplex</label>
+							&nbsp;
+							<input name="duplex" type="radio" value="simplex" id="isSim" />
+							<label for="isSim">Simplex</label>
+						</form>
+					</div>
+					<div class="row">
+						<form>
+							<input name="size" type="radio" value="A4" id="isA4" checked/>
+							<label for="isA4">A4</label>
+							&nbsp;
+							<input name="size" type="radio" value="A3" id="isA3" />
+							<label for="isA3">A3</label>
+						</form>
+					</div>
+					<div class="row">
+						<button id="printSubmit"class="btn waves-effect waves-light" type="submit" name="action">Enter<i class="material-icons right">send</i></button>
+					</div>
+				</div>
+				
+				<div class="col s8">
+					<div class="row">
+						<div class="col s4">
+							<a id="allClear" class="waves-effect waves-light btn-large">CLEAR</a>
+						</div>
+						<div class="col s8">
+							<p id="totwrap">Total: &#163;<span id="totValue">0.00</span></p>
+						</div>
+					</div>
+					<table id="dataTable">
+						<tr class="underlined">
+							<th>COLSS<span class="small"><br /><span id="totA3COLSS">0</span>&#64;<span id="priceA3COLSS">40</span>p<br /><span id="totA4COLSS">0</span>&#64;<span id="priceA4COLSS">25</span>p</span></th>
+							<th>COLDS<span class="small"><br /><span id="totA3COLDS">0</span>&#64;<span id="priceA3COLDS">47</span>p<br /><span id="totA4COLDS">0</span>&#64;<span id="priceA4COLDS">30</span>p</span></th>
+							<th>BWSS<span class="small"><br /><span id="totA3BWSS">0</span>&#64;<span id="priceA3BWSS">9</span>p<br /><span id="totA4BWSS">0</span>&#64;<span id="priceA4BWSS">5</span>p</span></th>
+							<th>BWDS<span class="small"><br /><span id="totA3BWDS">0</span>&#64;<span id="priceA3BWDS">13</span>p<br /><span id="totA4BWDS">0</span>&#64;<span id="priceA4BWDS">8</span>p</span></th>
+							<th>Paper<span class="small"><br />TOTAL A3<br />TOTAL A4</span></th>
+							<th>Cost<br />&nbsp;<br />&nbsp;</th>
+							<th>Remove<br />&nbsp;<br />&nbsp;</th>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="resources/jquery-1.11.3.js"></script>
+		<script type="text/javascript" src="resources/materialize-v0.98.0/js/materialize.min.js"></script>
+		<script type="text/javascript" src="pageCosting.js"></script>
+	</body>
+</html>
